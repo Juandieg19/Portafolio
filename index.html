@@ -256,25 +256,37 @@
 
       <div class="projects-bento">
 
-        <!-- FEATURED - real project -->
+        <!-- PROYECTO DESTACADO - Neuroprótesis -->
         <div class="proj-card proj-featured" data-aos="fade-up">
           <div class="proj-featured-badge" data-i18n="proj.featured">⭐ Destacado</div>
           <div class="proj-header">
-            <div class="proj-icon"><i class="fas fa-users-cog"></i></div>
+            <div class="proj-icon"><i class="fas fa-brain"></i></div>
             <div class="proj-links">
-              <a href="#" target="_blank" class="proj-link" aria-label="Demo"><i class="fas fa-external-link-alt"></i></a>
-              <a href="#" target="_blank" class="proj-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://youtu.be/LsvwlO8Vx18" target="_blank" class="proj-link" aria-label="Demo">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="https://github.com/Juandieg19/Neuroprosthesis-Control-via-AI-and-MPU6050-Sensor" target="_blank" class="proj-link" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
             </div>
           </div>
-          <h3 data-i18n="proj.p1.title">Sistema CRM para PYMES</h3>
+          <h3 data-i18n="proj.p1.title">IA Embebida para Control de Neuroprótesis</h3>
           <p data-i18n="proj.p1.desc">
-            Sistema de gestión de clientes y seguimiento comercial que centraliza historial de clientes y automatiza recordatorios, reemplazando WhatsApp y agendas físicas. Aumentó el cierre de ventas en un 28%.
+            Los sistemas de control para neuroprótesis dependían de reglas manuales sin capacidad de aprendizaje. Diseñé y entrené una red neuronal capaz de clasificar patrones de movimiento en tres categorías, construyendo el dataset desde cero, optimizando la arquitectura del modelo y desplegándolo en hardware embebido de bajo cómputo, logrando un sistema de control inteligente funcional en tiempo real.
           </p>
-          <div class="proj-metrics">
-            <div class="metric"><span class="met-val">+28%</span><span class="met-lab" data-i18n="proj.p1.m1">Ventas cerradas</span></div>
-            <div class="metric"><span class="met-val">100%</span><span class="met-lab" data-i18n="proj.p1.m2">Digital</span></div>
+          <div class="proj-images">
+            <img src="assets/MC.png" alt="Matriz de confusión" class="proj-img">
+            <img src="assets/AP.png" alt="Precisión y pérdida del modelo" class="proj-img">
           </div>
-          <div class="proj-stack"><span>Python</span><span>Flask</span><span>MySQL</span><span>pandas</span></div>
+          <div class="proj-metrics">
+            <div class="metric"><span class="met-val">98%</span><span class="met-lab" data-i18n="proj.p1.m1">Accuracy</span></div>
+            <div class="metric"><span class="met-val">3</span><span class="met-lab" data-i18n="proj.p1.m2">Clases</span></div>
+            <div class="metric"><span class="met-val">0.97</span><span class="met-lab" data-i18n="proj.p1.m3">F1 Score</span></div>
+          </div>
+          <div class="proj-stack">
+            <span>Python</span><span>TensorFlow</span><span>Keras</span>
+            <span>NumPy</span><span>ESP32</span><span>Edge AI</span><span>Arduino</span>
+          </div>
         </div>
 
         <!-- Placeholder 2 -->
