@@ -425,7 +425,7 @@ button { cursor: none; border: none; background: none; }
   color: var(--white);
   background: var(--purple-g);
 }
-.btn-full { width: 100%; justify-content: center; }
+.btn-full { width: 100%; justify-content: center; margin-top: 1rem; }
 .btn-large { padding: 1rem 2.5rem; font-size: 1rem; }
 
 /* ============================================
