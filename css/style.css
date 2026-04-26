@@ -321,11 +321,12 @@ button { cursor: none; border: none; background: none; }
 }
 .avatar-ring {
   position: relative;
-  width: 320px; height: 320px;
+  width: 410px; height: 410px;
   display: flex; align-items: center; justify-content: center;
+  margin-top: -90px;
 }
 .avatar-core {
-  width: 130px; height: 130px;
+  width: 210px; height: 210px;
   background: linear-gradient(135deg, var(--purple-d), var(--purple));
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
@@ -347,9 +348,9 @@ button { cursor: none; border: none; background: none; }
   border: 1px solid rgba(139,92,246,0.25);
   animation: spin linear infinite;
 }
-.r1 { width: 180px; height: 180px; animation-duration: 12s; }
-.r2 { width: 240px; height: 240px; animation-duration: 18s; animation-direction: reverse; border-style: dashed; }
-.r3 { width: 310px; height: 310px; animation-duration: 25s; opacity: 0.4; }
+.r1 { width: 260px; height: 260px; animation-duration: 12s; }
+.r2 { width: 320px; height: 320px; animation-duration: 18s; animation-direction: reverse; border-style: dashed; }
+.r3 { width: 390px; height: 390px; animation-duration: 25s; opacity: 0.4; }
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
 .float-badge {
