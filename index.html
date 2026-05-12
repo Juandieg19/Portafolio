@@ -7,11 +7,15 @@
   <title>Juan Diego Peña | Dev Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- MEJORA: Syne (headings editorial) + DM Sans (body más cálido) reemplazan Space Grotesk e Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- Custom cursor -->
   <div class="cursor" id="cursor"></div>
@@ -19,6 +23,8 @@
 
   <!-- Background -->
   <div class="bg-grid"></div>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
   <canvas id="particles"></canvas>
 
   <!-- ===== NAVBAR ===== -->
@@ -28,8 +34,9 @@
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#about"    data-i18n="nav.about">Sobre mí</a>
-      <a href="#skills"   data-i18n="nav.skills">Habilidades</a>
-      <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+      <a href="#skills"    data-i18n="nav.skills">Habilidades</a>
+      <a href="#projects"  data-i18n="nav.projects">Proyectos</a>
+      <a href="#services"  data-i18n="nav.services">Servicios</a>
       <a href="#contact"  data-i18n="nav.contact">Contacto</a>
     </div>
     <div class="nav-actions">
@@ -70,7 +77,7 @@
       </div>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.projects">Ver proyectos</a>
-        <a href="assets/cv.pdf" download class="btn btn-primary cv-download">
+        <a href="assets/cv.pdf" download class="btn btn-outline cv-download">
           <i class="fas fa-download"></i>
           <span data-i18n="hero.cta.cv">Descargar CV</span>
         </a>
@@ -92,8 +99,8 @@
         <div class="ring r2"></div>
         <div class="ring r3"></div>
         <div class="float-badge fb1"><i class="fas fa-brain"></i><span>ML</span></div>
-        <div class="float-badge fb2"><i class="fas fa-flask"></i><span>Flask</span></div>
-        <div class="float-badge fb3"><i class="fas fa-microchip"></i><span>Edge AI</span></div>
+        <div class="float-badge fb2 fb-cyan"><i class="fas fa-flask"></i><span>Flask</span></div>
+        <div class="float-badge fb3 fb-cyan"><i class="fas fa-microchip"></i><span>Edge AI</span></div>
         <div class="float-badge fb4"><i class="fas fa-database"></i><span>MySQL</span></div>
       </div>
     </div>
@@ -130,7 +137,7 @@
               </div>
             </div>
             <div class="detail-item">
-              <span class="detail-icon"><i class="fas fa-university"></i></span>
+              <span class="detail-icon di-cyan"><i class="fas fa-university"></i></span>
               <div>
                 <h4 data-i18n="about.edu2">Ingeniería Electrónica</h4>
                 <p>UIS · 2024</p>
@@ -144,7 +151,7 @@
               </div>
             </div>
             <div class="detail-item">
-              <span class="detail-icon"><i class="fas fa-language"></i></span>
+              <span class="detail-icon di-cyan"><i class="fas fa-language"></i></span>
               <div>
                 <h4 data-i18n="about.lang">Idiomas</h4>
                 <p data-i18n="about.langVal">Español (Nativo) · Inglés (B2)</p>
@@ -163,7 +170,7 @@
               <span class="stat-number">98%</span>
               <span class="stat-label" data-i18n="about.stat1">Accuracy modelo IA</span>
             </div>
-            <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stat-item stat-cyan" data-aos="zoom-in" data-aos-delay="200">
               <span class="stat-number">4+</span>
               <span class="stat-label" data-i18n="about.stat2">Proyectos entregados</span>
             </div>
@@ -201,7 +208,7 @@
         </div>
 
         <div class="skill-category" data-aos="fade-up" data-aos-delay="80">
-          <h3 class="cat-title" data-i18n="skills.cat.frameworks">Frameworks & Libs</h3>
+          <h3 class="cat-title cat-cyan" data-i18n="skills.cat.frameworks">Frameworks & Libs</h3>
           <div class="skill-chips">
             <div class="chip chip-invert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask"><span>Flask</span></div>
             <div class="chip chip-highlight chip-invert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="pandas"><span>pandas</span></div>
@@ -223,7 +230,7 @@
         </div>
 
         <div class="skill-category" data-aos="fade-up" data-aos-delay="240">
-          <h3 class="cat-title" data-i18n="skills.cat.db">Bases de datos</h3>
+          <h3 class="cat-title cat-cyan" data-i18n="skills.cat.db">Bases de datos</h3>
           <div class="skill-chips">
             <div class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
             <div class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite"><span>SQLite</span></div>
@@ -285,14 +292,16 @@
           </div>
           <div class="proj-stack">
             <span>Python</span><span>TensorFlow</span><span>Keras</span>
-            <span>NumPy</span><span>ESP32</span><span>Edge AI</span><span>Arduino</span>
+            <span>TensorFlow Lite</span><span>scikit-learn</span>
+            <span>NumPy</span><span>ESP32</span><span>MPU6050</span>
+            <span>Edge AI</span><span>C++</span>
           </div>
         </div>
 
         <!-- Placeholder 2 -->
         <div class="proj-card" data-aos="fade-up" data-aos-delay="100">
           <div class="proj-header">
-            <div class="proj-icon"><i class="fas fa-brain"></i></div>
+            <div class="proj-icon proj-icon-cyan"><i class="fas fa-brain"></i></div>
             <div class="proj-links">
               <a href="#" class="proj-link" aria-label="Demo"><i class="fas fa-external-link-alt"></i></a>
               <a href="#" class="proj-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -326,7 +335,7 @@
         <!-- Placeholder 4 -->
         <div class="proj-card" data-aos="fade-up" data-aos-delay="300">
           <div class="proj-header">
-            <div class="proj-icon"><i class="fas fa-file-invoice"></i></div>
+            <div class="proj-icon proj-icon-cyan"><i class="fas fa-file-invoice"></i></div>
             <div class="proj-links">
               <a href="#" class="proj-link" aria-label="Demo"><i class="fas fa-external-link-alt"></i></a>
               <a href="#" class="proj-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -343,6 +352,67 @@
       </div>
     </div>
   </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag" data-i18n="services.tag">¿Qué puedo hacer por ti?</span>
+        <h2 class="section-title" data-i18n="services.title">Servicios</h2>
+        <p class="section-sub" data-i18n="services.sub">Soluciones a medida para tu negocio o proyecto</p>
+      </div>
+
+      <div class="skills-grid" data-aos="fade-up">
+
+        <div class="skill-category">
+          <h3 class="cat-title"><i class="fas fa-server" style="margin-right:.5rem;"></i> <span data-i18n="services.s1.title">Desarrollo Backend</span></h3>
+          <p style="color:var(--text-muted);font-size:.95rem;margin:.5rem 0 .75rem;" data-i18n="services.s1.desc">APIs REST, sistemas de gestión, bases de datos relacionales y automatización de procesos con Python y Flask.</p>
+          <div class="skill-chips">
+            <div class="chip"><span data-i18n="services.price.project">Desde $X por proyecto</span></div>
+            <div class="chip chip-invert"><span data-i18n="services.price.hour">$X / hora</span></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="cat-title cat-cyan"><i class="fas fa-desktop" style="margin-right:.5rem;"></i> <span data-i18n="services.s2.title">Desarrollo Frontend</span></h3>
+          <p style="color:var(--text-muted);font-size:.95rem;margin:.5rem 0 .75rem;" data-i18n="services.s2.desc">Interfaces web funcionales y responsivas con HTML, CSS y JavaScript. Integración con backends Flask o APIs externas.</p>
+          <div class="skill-chips">
+            <div class="chip"><span data-i18n="services.price.project">Desde $X por proyecto</span></div>
+            <div class="chip chip-invert"><span data-i18n="services.price.hour">$X / hora</span></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="cat-title"><i class="fas fa-robot" style="margin-right:.5rem;"></i> <span data-i18n="services.s3.title">Automatización de Procesos</span></h3>
+          <p style="color:var(--text-muted);font-size:.95rem;margin:.5rem 0 .75rem;" data-i18n="services.s3.desc">Scripts y pipelines que eliminan tareas manuales repetitivas: generación de documentos PDF, reportes automáticos y limpieza de datos.</p>
+          <div class="skill-chips">
+            <div class="chip"><span data-i18n="services.price.project">Desde $X por proyecto</span></div>
+            <div class="chip chip-invert"><span data-i18n="services.price.hour">$X / hora</span></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="cat-title cat-cyan"><i class="fas fa-chart-bar" style="margin-right:.5rem;"></i> <span data-i18n="services.s4.title">Dashboards y Análisis de Datos</span></h3>
+          <p style="color:var(--text-muted);font-size:.95rem;margin:.5rem 0 .75rem;" data-i18n="services.s4.desc">Visualizaciones interactivas, reportes financieros y análisis de datos para la toma de decisiones con pandas, Matplotlib y Power BI.</p>
+          <div class="skill-chips">
+            <div class="chip"><span data-i18n="services.price.project">Desde $X por proyecto</span></div>
+            <div class="chip chip-invert"><span data-i18n="services.price.hour">$X / hora</span></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="cat-title"><i class="fas fa-brain" style="margin-right:.5rem;"></i> <span data-i18n="services.s5.title">Machine Learning Aplicado</span></h3>
+          <p style="color:var(--text-muted);font-size:.95rem;margin:.5rem 0 .75rem;" data-i18n="services.s5.desc">Modelos de clasificación, predicción y detección de patrones con TensorFlow, Keras y scikit-learn. Incluye despliegue en producción o hardware embebido.</p>
+          <div class="skill-chips">
+            <div class="chip"><span data-i18n="services.price.project">Desde $X por proyecto</span></div>
+            <div class="chip chip-invert"><span data-i18n="services.price.hour">$X / hora</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ===== CONTACT ===== -->
   <section class="section section-alt" id="contact">
     <div class="container">
@@ -390,8 +460,6 @@
         </div>
 
         <!-- Form -->
-        <!-- INSTRUCCIONES: Ve a https://formspree.io, crea una cuenta, crea un formulario
-             y reemplaza "YOUR_FORM_ID" con tu ID real. -->
         <form class="contact-form" id="contactForm"
               action="https://formspree.io/f/mrerdajw" method="POST"
               data-aos="fade-left">
